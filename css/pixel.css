@@ -1,0 +1,437 @@
+/* =========================================================
+   Faris Abulkhoir — PIXEL / RETRO skin
+   Overrides modern.css to a simple, cute 8-bit look.
+   Loaded AFTER modern.css so it wins the cascade.
+   ========================================================= */
+
+:root {
+  /* HAPPY pixel palette — bright sky, candy accents, flat & cheerful */
+  --bg: #243a6b;                /* cheerful blue base (flat, no gradient) */
+  --bg-2: #2b4582;
+  --surface: #ffffff;          /* white cards pop on blue — sticker look */
+  --surface-2: #fff4d6;        /* soft cream */
+  --border: #1a1030;            /* bold dark outline */
+  --text: #241a3a;             /* dark ink text on white cards */
+  --muted: #5b5276;
+  --brand: #ff8a3d;             /* happy orange */
+  --brand-2: #ff5d8f;           /* bubblegum pink */
+  --mint: #2ecf8f;              /* fresh mint */
+  --sky: #37b6ff;               /* bright sky */
+  --grape: #a05cff;             /* grape */
+  --sun: #ffd23f;               /* sunny yellow */
+
+  /* readable variants — accents must match their background */
+  --brand-deep: #d96e00;        /* orange for TEXT on white/cream cards */
+  --brand-light: #ffb35c;       /* orange for TEXT on blue background */
+  --mint-deep: #0f8f62;         /* mint for TEXT on white cards */
+  --muted-light: #bcc9e8;       /* secondary TEXT on blue background */
+
+  --grad: #ff8a3d;              /* kill gradients -> flat */
+  --radius: 0px;                /* pixels have NO rounded corners */
+  --maxw: 1120px;
+
+  --px: 3px;                    /* standard outline thickness */
+  --hard: 6px 6px 0 var(--border);        /* hard pixel shadow */
+  --hard-sm: 4px 4px 0 var(--border);
+  --shadow: var(--hard);
+  --ring: 0 0 0 var(--px) var(--border);
+}
+
+/* ---- Base type: pixel fonts, crisp rendering ---- */
+body {
+  font-family: "VT323", "Courier New", monospace;
+  font-size: 20px;              /* VT323 is small; bump it up */
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  image-rendering: pixelated;
+  background: var(--bg);        /* FLAT solid — no gradient, no glow */
+}
+
+/* hard pixel checkerboard wallpaper (sharp squares, not soft) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-color: var(--bg);
+  background-image:
+    conic-gradient(rgba(255,255,255,.045) 90deg, transparent 90deg 180deg,
+                   rgba(255,255,255,.045) 180deg 270deg, transparent 270deg);
+  background-size: 48px 48px;   /* big chunky pixel squares */
+  pointer-events: none;
+}
+
+/* decorative floating pixel dots removed — reads as generated filler */
+
+/* nuke the AI-glossy aurora/background layers from modern.css */
+.aurora, .grid-bg, .bg-aurora, .spotlight { display: none !important; }
+
+h1, h2, h3, h4,
+.section-title, .brand, .btn, .eyebrow, .nav-links a,
+.role, .badge, .lang-switch, .filter, .stat b, .typed, .cat-badge {
+  font-family: "Press Start 2P", "VT323", monospace;
+  letter-spacing: 0;
+}
+
+/* headings pixel-sized (Press Start 2P runs large, so scale down) */
+.section-title { font-size: clamp(18px, 3vw, 30px); line-height: 1.35; }
+h1 { line-height: 1.4; }
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--brand-deep);
+  background: var(--surface);
+  border: var(--px) solid var(--border);
+  padding: 6px 10px;
+  box-shadow: none;             /* flatter — not every element needs the hard shadow */
+}
+
+/* kill gradient text — flat solid color reads cleaner in pixel */
+.gradient-text {
+  -webkit-text-fill-color: var(--brand);
+  color: var(--brand);
+  background: none;
+  animation: none !important;
+}
+
+/* ---------- Hard-edged shared card look ---------- */
+.card, .service-card, .proj, .tech-group, .info-card,
+.timeline-item, .edu-item, .achievement, .contact-card,
+.exp-item, .highlight, .stat {
+  border: var(--px) solid var(--border) !important;
+  border-radius: 0 !important;
+  box-shadow: var(--hard) !important;
+  backdrop-filter: none !important;      /* remove glassmorphism blur */
+  background: var(--surface) !important;
+  transition: transform .08s steps(2), box-shadow .08s steps(2) !important;
+}
+/* cute "press" interaction: nudge down-right, shrink the shadow */
+.card:hover, .service-card:hover, .proj:hover,
+.tech-group:hover, .info-card:hover, .highlight:hover,
+.contact-card:hover, .stat:hover {
+  transform: translate(3px, 3px) !important;
+  box-shadow: var(--hard-sm) !important;
+}
+
+/* remove modern.css spotlight glow pseudo-elements inside cards */
+.service-card::before, .proj::before, .tech-group::before,
+.card::before, .highlight::before { display: none !important; }
+
+/* ---------- Contrast: white cards vs blue background ---------- */
+/* On the blue page background, text stays bright. */
+body, p, li, .lead, .section-head p, .muted { color: #eef3ff; }
+.section-title, h1, h2, h3, h4 { color: #ffffff; }
+.nav-links a { color: #dfe7ff; }
+
+/* Inside white/cream cards, flip to dark ink so it reads. */
+.card, .service-card, .proj, .tech-group, .info-card,
+.timeline-item, .edu-item, .achievement, .contact-card,
+.exp-item, .highlight, .stat {
+  color: var(--text) !important;
+}
+.card :where(p,li,span,h3,h4,small,b),
+.service-card :where(p,li,span,h3,h4,small,b),
+.proj :where(p,li,span,h4,small),
+.proj h3,
+.tech-group :where(p,li,span,h3,h4,small),
+.info-card :where(p,li,span,h3,h4,small),
+.timeline-item :where(p,li,span,h3,h4,small),
+.edu-item :where(p,li,span,h3,h4,small),
+.achievement :where(p,li,span,h3,h4,small),
+.contact-card :where(p,li,span,h3,h4,small,a),
+.exp-item :where(p,li,span,h3,h4,small),
+.highlight :where(span,p) {
+  color: var(--text) !important;
+}
+/* keep accent-colored bits accented even inside cards */
+.stat b, .gradient-text { color: var(--brand-deep) !important; }
+.highlight i { color: var(--mint-deep) !important; }
+
+/* ---------- Buttons: chunky pixel buttons ---------- */
+.btn {
+  font-size: 11px;
+  border-radius: 0 !important;
+  border: var(--px) solid var(--border);
+  box-shadow: var(--hard-sm);
+  padding: 14px 20px;
+  background: var(--surface);
+  color: var(--text);
+  transition: transform .08s steps(2), box-shadow .08s steps(2);
+  background-image: none !important;
+  animation: none !important;
+}
+.btn::before, .btn::after { display: none !important; }   /* no shine sweep */
+.btn-primary, .btn.primary {
+  background: var(--brand) !important;
+  color: #221200 !important;
+}
+.btn:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--border);
+}
+.btn:active { transform: translate(4px, 4px); box-shadow: none; }
+
+/* ---------- Navbar ---------- */
+.nav {
+  background: var(--surface) !important;
+  border-bottom: var(--px) solid var(--border);
+  backdrop-filter: none !important;
+  box-shadow: 0 4px 0 var(--border);
+}
+.brand { font-size: 15px; color: var(--text); }
+.brand span { color: var(--brand-deep); }
+.nav .nav-links a {
+  font-size: 10px;
+  color: var(--muted) !important;
+  transition: color .1s steps(1);
+}
+.nav .nav-links a:hover, .nav .nav-links a.active, .nav .nav-links a.current { color: var(--brand-deep) !important; }
+
+.lang-switch, .nav-toggle {
+  border: var(--px) solid var(--border) !important;
+  border-radius: 0 !important;
+  box-shadow: var(--hard-sm);
+  background: var(--surface) !important;
+  font-size: 10px;
+  overflow: hidden;
+}
+.lang-switch button, .lang-switch a {
+  border-radius: 0 !important;
+  font-family: "Press Start 2P", monospace;
+  font-size: 9px;
+  color: var(--muted) !important;
+}
+.lang-switch button.active, .lang-switch a.active,
+.lang-switch [aria-pressed="true"] {
+  background: var(--brand) !important;
+  color: #221200 !important;
+}
+
+/* ---------- Hero ---------- */
+.role, .badge, .availability {
+  border: var(--px) solid var(--border) !important;
+  border-radius: 0 !important;
+  box-shadow: var(--hard-sm);
+  background: var(--surface) !important;
+  font-size: 9px;
+  color: var(--mint-deep) !important;
+  animation: none !important;
+}
+.badge .dot, .availability .dot {
+  border-radius: 0 !important;        /* square blinking pixel */
+  animation: pixblink 1s steps(1) infinite !important;
+}
+@keyframes pixblink { 0%,50% { opacity: 1 } 50.01%,100% { opacity: .25 } }
+
+/* hero photo: square pixel frame, no rotating ring, no 3D tilt */
+.hero-photo, .hero-photo .ring, .hero-photo::before, .hero-photo::after {
+  border-radius: 0 !important;
+  animation: none !important;
+  background: none !important;
+}
+.hero-photo .ring { display: none !important; }   /* kill the spinning gradient ring */
+.hero-photo img {
+  border-radius: 0 !important;
+  border: var(--px) solid var(--border);
+  box-shadow: var(--hard);
+  image-rendering: auto;             /* keep the photo itself smooth */
+  transform: none !important;        /* disable cursor tilt */
+}
+
+.typed, #typed { font-size: 13px; color: var(--brand-light); }
+
+/* hero heading: Press Start 2P is wide — shrink + give it room to wrap */
+.hero h1 {
+  font-size: clamp(16px, 3.4vw, 30px) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0 !important;
+  word-break: break-word;
+}
+.hero h2 { font-size: clamp(13px, 2vw, 18px) !important; }
+.hero .lead, p.lead { font-size: 19px; }
+
+/* ---------- Tech chips: little pixel tags ---------- */
+.ti, .chips span, .cat-badge {
+  border-radius: 0 !important;
+  border: 2px solid var(--border) !important;
+  box-shadow: 2px 2px 0 var(--border) !important;
+  background: var(--surface-2) !important;
+  font-family: "VT323", monospace;
+  font-size: 16px !important;
+}
+.cat-badge {
+  font-family: "Press Start 2P", monospace;
+  font-size: 8px !important;
+  background: var(--brand) !important;
+  color: #221200 !important;
+}
+
+/* ---------- Project filter ---------- */
+.filter {
+  border-radius: 0 !important;
+  border: var(--px) solid var(--border);
+  box-shadow: var(--hard-sm);
+  background: var(--surface);
+  font-size: 9px;
+  color: var(--text);
+}
+.filter.active { background: var(--brand); color: #221200; }
+
+/* project thumbnails: crisp edge, no round */
+.proj img, .thumb { border-radius: 0 !important; }
+.thumb { border-bottom: var(--px) solid var(--border); }
+
+/* ---------- Timeline / Journey dots ---------- */
+.dot, .timeline-dot, .exp-dot {
+  border-radius: 0 !important;       /* square pixel node */
+  box-shadow: none !important;
+  animation: none !important;
+  background: var(--brand) !important;
+  border: 2px solid var(--border);
+  color: #221200 !important;
+}
+
+/* ---------- Stats ---------- */
+.stat b, .stat-num {
+  -webkit-text-fill-color: var(--brand);
+  color: var(--brand);
+  background: none;
+  font-size: 20px;
+}
+
+/* ---------- Forms ---------- */
+input, textarea {
+  border-radius: 0 !important;
+  border: var(--px) solid var(--border) !important;
+  background: var(--surface-2) !important;
+  box-shadow: inset 2px 2px 0 rgba(0,0,0,.25);
+  font-family: "VT323", monospace;
+  font-size: 18px;
+  color: var(--text);
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--brand) !important;
+}
+
+/* ---------- Scroll progress + scrollbar (keep but de-gloss) ---------- */
+.progress-top { background: var(--brand) !important; height: 4px; }
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: var(--bg-2); }
+::-webkit-scrollbar-thumb {
+  background: var(--brand);
+  border: 2px solid var(--border);
+  border-radius: 0;
+}
+
+/* ---------- Footer ---------- */
+.footer, footer {
+  border-top: var(--px) solid var(--border);
+  background: var(--bg-2) !important;
+  color: #eef3ff !important;
+}
+.footer :where(a,span,p), footer :where(a,span,p) { color: #eef3ff !important; }
+
+/* ---------- Back to top ---------- */
+.top, #toTop {
+  border-radius: 0 !important;
+  border: var(--px) solid var(--border);
+  box-shadow: var(--hard-sm);
+  background: var(--brand) !important;
+  color: #221200 !important;
+  animation: none !important;
+}
+
+/* ---------- Playful accent rotation on section eyebrows ----------
+   deeper shades so they stay readable on the white chip */
+.about .eyebrow { color: #1a7fc1; }
+.services .eyebrow { color: var(--mint-deep); }
+#journey .eyebrow, .journey .eyebrow { color: #7a3fd1; }
+.contact .eyebrow { color: #d63d72; }
+
+/* ---------- Respect reduced motion / already-static ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; }
+}
+
+/* ---------- Mobile: lighten the heavy pixel fonts a touch ---------- */
+@media (max-width: 640px) {
+  body { font-size: 18px; }
+  .section-title { font-size: 16px; }
+  .nav-links a, .btn { font-size: 9px; }
+}
+
+/* =========================================================
+   DE-GLOSS PASS — kill leftover "AI polish" from modern.css
+   (blur orbs, glows, gradient fills, pill badges)
+   ========================================================= */
+
+/* hero blur orbs */
+.hero::before, .hero::after { display: none !important; }
+
+/* green pulsing "status" dot inside the availability badge */
+.hero .role::before { display: none !important; }
+
+/* timeline: flat line, no gradient fade */
+.timeline::before {
+  background: var(--border) !important;
+  opacity: 1 !important;
+}
+
+/* progress bar & form focus: no glow */
+.progress-top { box-shadow: none !important; }
+.field input:focus, .field textarea:focus { box-shadow: none !important; }
+
+/* gradient-tinted achievement card -> plain card look */
+.achv {
+  background: var(--surface) !important;
+  border: var(--px) solid var(--border) !important;
+  border-radius: 0 !important;
+  box-shadow: var(--hard) !important;
+}
+.achv .trophy { box-shadow: 3px 3px 0 var(--border); }
+
+/* GPA pill -> square pixel tag */
+.edu-item .gpa {
+  border-radius: 0 !important;
+  background: var(--surface-2) !important;
+  border: 2px solid var(--border) !important;
+  color: var(--text) !important;
+  font-family: "VT323", monospace;
+  font-size: 16px;
+  box-shadow: 2px 2px 0 var(--border);
+}
+
+/* rounded gradient icon squares -> square pixel tiles */
+.card .ic, .ci .ci-ic, .tg-ic, .ct-ic, .achv .trophy {
+  border-radius: 0 !important;
+  border: 2px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
+}
+.ci { border-radius: 0 !important; box-shadow: var(--hard) !important; border: var(--px) solid var(--border) !important; background: var(--surface) !important; }
+.ci .ci-ic { border: var(--px) solid var(--border); box-shadow: none; }
+
+/* socials & nav bits: square, matching the pixel look */
+.socials a { border-radius: 0 !important; }
+.highlight { border-radius: 0 !important; }
+.plink { border-radius: 0 !important; }
+
+/* tech items: drop the hover lift (steps() feel already covers it) */
+.ti { border-radius: 0 !important; }
+.ti:hover { transform: none; }
+
+/* =========================================================
+   CONTRAST FIX — text that sits on the BLUE page background
+   (--muted is tuned for white cards; on blue it disappears)
+   ========================================================= */
+
+/* timeline entries (experience/education sit on the page bg) */
+.tl-item .where,
+.tl-item ul.points li { color: var(--muted-light) !important; }
+.tl-item .place { color: #ffffff !important; }
+.tl-item .when { color: var(--brand-light); }
+
+/* contact form labels sit on the blue bg, not in a card */
+.field label { color: var(--muted-light) !important; }
+.form-note a { color: var(--sun) !important; }   /* beats the inline style */

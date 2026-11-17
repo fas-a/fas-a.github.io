@@ -1,326 +1,630 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Profile | Faris Abulkhoir</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="freehtml5.co" />
+	<title>Faris Abulkhoir — Web &amp; Game Developer</title>
+	<meta name="description" content="Portfolio of Faris Abulkhoir — Web Developer, Game Developer & 3D enthusiast. Informatics Engineering graduate, Politeknik Negeri Bandung." />
+	<meta name="keywords" content="Faris Abulkhoir, web developer, game developer, portfolio, Laravel, React, Unity, Blender" />
+	<meta name="author" content="Faris Abulkhoir" />
 
-	<!-- 
-	//////////////////////////////////////////////////////
+	<!-- Open Graph / Twitter -->
+	<meta property="og:title" content="Faris Abulkhoir — Web & Game Developer" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://drive.google.com/thumbnail?id=1jR-K1SfMIa0NDk8mfhbIbVREkfsfuspf&sz=w1000" />
+	<meta property="og:description" content="Web Developer, Game Developer & 3D enthusiast. Lihat project saya." />
+	<meta property="og:site_name" content="Faris Abulkhoir" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Faris Abulkhoir — Web & Game Developer" />
+	<meta name="twitter:image" content="https://drive.google.com/thumbnail?id=1jR-K1SfMIa0NDk8mfhbIbVREkfsfuspf&sz=w1000" />
 
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FreeHTML5.co
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
 
-	//////////////////////////////////////////////////////
-	 -->
+	<div class="progress-top" id="progressTop"></div>
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
-
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-	</head>
-	<body>
-		
-	<div class="fh5co-loader"></div>
-	
-	<div id="page">	
-	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(images/cover_bg_3.jpg);" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
+	<!-- NAVBAR -->
+	<header class="nav" id="nav">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="display-t js-fullheight">
-						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<!-- <div class="profile-thumb" style="background: url(images/pp.jpg);"></div> -->
-							<h1><span>Faris Abulkhoir</span></h1>
-							<h3><span>Web Developer / Game Developer</span></h3>
-							<p>
-								<ul class="fh5co-social-icons">
-									<li><a href="https://github.com/fas-a"><i class="icon-github2"></i></a></li>
-									<li><a href="https://id.linkedin.com/in/faris-abulkhoir-648984248"><i class="icon-linkedin2"></i></a></li>
-								</ul>
-							</p>
-						</div>
-					</div>
+			<a href="#home" class="brand">Faris<span>.</span></a>
+			<button class="nav-toggle" id="navToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+			<nav class="nav-links" id="navLinks">
+				<a href="#home" data-en="Home" data-id="Beranda">Home</a>
+				<a href="#about" data-en="About" data-id="Tentang">About</a>
+				<a href="#services" data-en="Services" data-id="Layanan">Services</a>
+				<a href="#journey" data-en="Journey" data-id="Perjalanan">Journey</a>
+				<a href="#work" data-en="Projects" data-id="Proyek">Projects</a>
+				<a href="#contact" class="btn btn-primary" style="padding:9px 20px;" data-en="Contact" data-id="Kontak">Contact</a>
+				<div class="lang-switch" role="group" aria-label="Language">
+					<button type="button" data-lang="en">EN</button>
+					<button type="button" data-lang="id">ID</button>
 				</div>
-			</div>
+			</nav>
 		</div>
 	</header>
 
-	<div id="fh5co-about" class="animate-box">
+	<!-- HERO -->
+	<section class="hero" id="home">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>About Me</h2>
+			<div class="hero-grid">
+				<div class="hero-copy">
+					<span class="role" data-en="Available for work" data-id="Terbuka untuk bekerja">Available for work</span>
+					<h1 data-en="Hi, I'm <span class='gradient-text'>Faris Abulkhoir</span>" data-id="Halo, saya <span class='gradient-text'>Faris Abulkhoir</span>">Hi, I'm <span class="gradient-text">Faris Abulkhoir</span></h1>
+					<h2 style="font-size:clamp(18px,3vw,26px);font-weight:500;margin-bottom:18px;color:var(--muted);">
+						<span data-en="I'm a " data-id="Saya seorang ">I'm a </span><span class="typed" id="typed"></span><span class="cursor"></span>
+					</h2>
+					<p class="lead" data-en="Building clean web apps, fun games, and lively 3D worlds. Focused on experiences that are clean, fast, and functional." data-id="Membangun web yang rapi, game yang seru, dan dunia 3D yang hidup. Fokus pada pengalaman yang bersih, cepat, dan fungsional.">Building clean web apps, fun games, and lively 3D worlds. Focused on experiences that are clean, fast, and functional.</p>
+					<div class="hero-actions">
+						<a href="#work" class="btn btn-primary" data-en="View Projects <i class='fa-solid fa-arrow-right'></i>" data-id="Lihat Proyek <i class='fa-solid fa-arrow-right'></i>">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+					<div class="socials">
+						<a href="https://github.com/fas-a" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+						<a href="https://id.linkedin.com/in/faris-abulkhoir-648984248" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+						<a href="mailto:abulkhoirfaris0@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+					</div>
+				</div>
+				<div class="hero-photo">
+					<img src="https://drive.google.com/thumbnail?id=1jR-K1SfMIa0NDk8mfhbIbVREkfsfuspf&sz=w1000" alt="Faris Abulkhoir">
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<ul class="info">
-						<li><span class="first-block">Full Name:</span><span class="second-block">Faris Abulkhoir</span></li>
-						<li><span class="first-block">Email:</span><span class="second-block">abulkhoirfaris0@gmail.com</span></li>
+		</div>
+	</section>
+
+	<!-- ABOUT -->
+	<section class="section about" id="about">
+		<div class="container">
+			<div class="section-head reveal">
+				<span class="eyebrow" data-en="About" data-id="Tentang">About</span>
+				<h2 class="section-title" data-en="About Me" data-id="Tentang Saya">About Me</h2>
+			</div>
+			<div class="about-grid">
+				<div class="card-info reveal from-left">
+					<ul>
+						<li><span class="k" data-en="Name" data-id="Nama">Name</span><span class="v">Faris Abulkhoir</span></li>
+						<li><span class="k" data-en="Education" data-id="Pendidikan">Education</span><span class="v" data-en="D4 Informatics Engineering" data-id="D4 Teknik Informatika">D4 Informatics Engineering</span></li>
+						<li><span class="k" data-en="University" data-id="Kampus">University</span><span class="v">Politeknik Negeri Bandung</span></li>
+						<li><span class="k" data-en="Location" data-id="Lokasi">Location</span><span class="v">Karawang, Indonesia</span></li>
+						<li><span class="k" data-en="Focus" data-id="Fokus">Focus</span><span class="v">Web · Game · IoT · DevOps</span></li>
 					</ul>
+					<div class="stats" style="margin-top:22px;">
+						<div class="stat"><b>5+</b><span data-en="Work experiences" data-id="Pengalaman kerja">Work experiences</span></div>
+						<div class="stat"><b>3.53</b><span>GPA</span></div>
+						<div class="stat"><b>8+</b><span data-en="Projects" data-id="Proyek">Projects</span></div>
+					</div>
 				</div>
-				<div class="col-md-8">
-					<h2>Hello There!</h2>
-					<p>My name is Faris Abulkhoir. I am an undergraduate student at Politeknik Negeri Bandung majoring in Informatics Engineering. I am deeply interested in web development, game development, and the Internet of Things (IoT). Throughout my studies, I have been involved in various academic projects that have helped me develop practical skills in web development technologies such as HTML, CSS, PHP, and JavaScript, as well as a solid understanding of software development. I am a motivated and adaptable learner who enjoys working in dynamic and collaborative environments, always eager to grow and contribute meaningfully.</p>
-					<p>
-						<ul class="fh5co-social-icons">
-							<li><a href="https://github.com/fas-a"><i class="icon-github2"></i></a></li>
-							<li><a href="https://id.linkedin.com/in/faris-abulkhoir-648984248"><i class="icon-linkedin2"></i></a></li>
-						</ul>
-					</p>
+				<div class="about-text reveal from-right">
+					<h3 data-en="Hello There! 👋" data-id="Halo! 👋">Hello There! 👋</h3>
+					<p data-en="I'm Faris Abulkhoir, an Applied Bachelor (D4) graduate in Informatics Engineering from Politeknik Negeri Bandung with professional experience in software development. Passionate about Web Development, Game Development, IoT, and DevOps, with strong curiosity in Cloud Computing and automation." data-id="Saya Faris Abulkhoir, lulusan D4 Teknik Informatika Politeknik Negeri Bandung dengan pengalaman profesional di software development. Antusias pada Web Development, Game Development, IoT, dan DevOps, serta rasa ingin tahu kuat pada Cloud Computing dan automation.">I'm Faris Abulkhoir, an Applied Bachelor (D4) graduate in Informatics Engineering from Politeknik Negeri Bandung with professional experience in software development. Passionate about Web Development, Game Development, IoT, and DevOps, with strong curiosity in Cloud Computing and automation.</p>
+					<p data-en="Accustomed to working with targets, adapting to client needs, and delivering effective technical solutions. A <em>fast learner</em> ready to contribute to the technology industry." data-id="Terbiasa bekerja dengan target, beradaptasi pada kebutuhan klien, dan memberikan solusi teknis yang efektif. Seorang <em>fast learner</em> yang siap berkontribusi di industri teknologi.">Accustomed to working with targets, adapting to client needs, and delivering effective technical solutions. A <em>fast learner</em> ready to contribute to the technology industry.</p>
+					<div class="highlights">
+						<div class="highlight"><i class="fa-solid fa-circle-check"></i><span data-en="Fast learner &amp; adaptive" data-id="Fast learner &amp; adaptif">Fast learner &amp; adaptive</span></div>
+						<div class="highlight"><i class="fa-solid fa-circle-check"></i><span data-en="Comfortable with targets" data-id="Terbiasa bekerja dengan target">Comfortable with targets</span></div>
+						<div class="highlight"><i class="fa-solid fa-circle-check"></i><span data-en="Problem solver" data-id="Pemecah masalah">Problem solver</span></div>
+						<div class="highlight"><i class="fa-solid fa-circle-check"></i><span data-en="Fullstack &amp; game dev" data-id="Fullstack &amp; game dev">Fullstack &amp; game dev</span></div>
+					</div>
+					<a href="#contact" class="btn btn-primary" data-en="Let's Collaborate <i class='fa-solid fa-arrow-right'></i>" data-id="Ayo Berkolaborasi <i class='fa-solid fa-arrow-right'></i>">Let's Collaborate <i class="fa-solid fa-arrow-right"></i></a>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
-	<div id="fh5co-features" class="animate-box">
+	<!-- SERVICES -->
+	<section class="section" id="services">
 		<div class="container">
-			<div class="services-padding">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>My Services</h2>
-					</div>
+			<div class="section-head reveal">
+				<span class="eyebrow" data-en="What I Do" data-id="Yang Saya Lakukan">What I Do</span>
+				<h2 class="section-title" data-en="My Services" data-id="Layanan Saya">My Services</h2>
+				<p data-en="Three areas I focus on the most." data-id="Tiga bidang yang paling saya tekuni.">Three areas I focus on the most.</p>
+			</div>
+			<div class="cards">
+				<div class="card reveal zoom-in">
+					<div class="ic"><i class="fa-solid fa-code"></i></div>
+					<h3 data-en="Web Development" data-id="Web Development">Web Development</h3>
+					<p data-en="Full-stack web apps with PHP, Laravel, JavaScript, React &amp; Node.js." data-id="Aplikasi web full-stack dengan PHP, Laravel, JavaScript, React &amp; Node.js.">Full-stack web apps with PHP, Laravel, JavaScript, React &amp; Node.js.</p>
 				</div>
-				<div class="row">
-					<div class="col-md-4 text-center">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-cogs"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Web Development</h3>
-								<p>PHP | JavaScript</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-4 text-center">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-game-controller"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Game Development</h3>
-								<p>Unity</p>
-							</div>
-						</div>
-
-					</div>
-					<div class="col-md-4 text-center">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-hammer"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>3D Modeling</h3>
-								<p>Blender</p>
-							</div>
-						</div>
-					</div>
+				<div class="card reveal zoom-in">
+					<div class="ic"><i class="fa-solid fa-gamepad"></i></div>
+					<h3 data-en="Game Development" data-id="Game Development">Game Development</h3>
+					<p data-en="Interactive 2D/3D games using Unity with C#." data-id="Game 2D/3D interaktif menggunakan Unity dengan C#.">Interactive 2D/3D games using Unity with C#.</p>
 				</div>
-
+				<div class="card reveal zoom-in">
+					<div class="ic"><i class="fa-solid fa-cube"></i></div>
+					<h3 data-en="3D Modeling" data-id="3D Modeling">3D Modeling</h3>
+					<p data-en="3D modeling &amp; animation with Blender for game assets and visuals." data-id="Modeling &amp; animasi 3D dengan Blender untuk aset game dan visual.">3D modeling &amp; animation with Blender for game assets and visuals.</p>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
-	<div class="slider">
-		<div class="slide-track">
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/html-5_8516.html"><img src="https://static.cdnlogo.com/logos/h/90/html-5.svg"></a>
-		  </div>
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/css_36679.html"><img src="https://static.cdnlogo.com/logos/c/18/css.svg"></a>
-		  </div>
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/php_3819.html"><img src="https://static.cdnlogo.com/logos/p/79/php.svg"></a>
-		  </div>
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/javascript_18196.html"><img src="https://static.cdnlogo.com/logos/j/44/javascript.svg"></a>
-		  </div>
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/react_22568.html"><img src="https://static.cdnlogo.com/logos/r/63/react.svg"></a>
-		  </div>
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/node-js_36466.html"><img src="https://static.cdnlogo.com/logos/n/49/node-js.svg"></a>
-		  </div>
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/laravel_40397.html"><img src="https://static.cdnlogo.com/logos/l/23/laravel.svg"></a>
-		  </div>
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/python_358.html"><img src="https://static.cdnlogo.com/logos/p/3/python.svg"></a>
-		  </div>
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/mysql_9525.html"><img src="https://static.cdnlogo.com/logos/m/10/mysql.svg"></a>
-		  </div>
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/mongodb_9555.html"><img src="https://static.cdnlogo.com/logos/m/25/mongodb.svg"></a>
-		  </div>
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/postgresql_39744.html"><img src="https://static.cdnlogo.com/logos/p/93/postgresql.svg"></a>
-		  </div>
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/figma_39644.html"><img src="https://static.cdnlogo.com/logos/f/43/figma.svg"></a>
-		  </div>
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/blender_43864.html"><img src="https://static.cdnlogo.com/logos/b/32/blender.svg"></a>
-		  </div>
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/unity_30832.html"><img src="https://static.cdnlogo.com/logos/u/92/unity.svg"></a>
-		  </div>
-		  <div class="slide">
-			<a href="https://cdnlogo.com/logo/canva_39031.html"><img src="https://static.cdnlogo.com/logos/c/36/canva.png"></a>
-		  </div>
-		</div>
-	  </div>
-
-
-	<div id="fh5co-work" class="fh5co-bg-dark">
+	<!-- JOURNEY (Timeline) -->
+	<section class="section about" id="journey">
 		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Project</h2>
-				</div>
+			<div class="section-head reveal">
+				<span class="eyebrow" data-en="Journey" data-id="Perjalanan">Journey</span>
+				<h2 class="section-title" data-en="Experience &amp; Education" data-id="Pengalaman &amp; Pendidikan">Experience &amp; Education</h2>
+				<p data-en="Professional experience and academic background." data-id="Pengalaman profesional dan riwayat pendidikan.">Professional experience and academic background.</p>
 			</div>
-			<div class="row">
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portofolio1.png);">
-						<div class="desc">
-							<h3>Himakom Web App</h3>
-							<span>Laravel</span>
+			<div class="journey-grid">
+				<!-- EXPERIENCE -->
+				<div class="j-exp">
+					<div class="col-title reveal">
+						<span class="ct-ic"><i class="fa-solid fa-briefcase"></i></span>
+						<h3 data-en="Work Experience" data-id="Pengalaman Kerja">Work Experience</h3>
+					</div>
+					<div class="timeline">
+						<div class="tl-item reveal">
+							<span class="dot"><i class="fa-solid fa-code"></i></span>
+							<div class="meta-row"><span class="when" data-en="Apr 2026 – Aug 2026" data-id="Apr 2026 – Agu 2026">Apr 2026 – Aug 2026</span></div>
+							<h3 data-en="Fullstack Developer (Part Time)" data-id="Fullstack Developer (Paruh Waktu)">Fullstack Developer (Part Time)</h3>
+							<div class="where"><span class="place">Karisma Technologies</span></div>
+							<ul class="points">
+								<li data-en="Bug fixing &amp; maintenance on Odoo, React frontend, and Laravel backend apps." data-id="Bug fixing &amp; maintenance aplikasi Odoo, frontend React, dan backend Laravel.">Bug fixing &amp; maintenance on Odoo, React frontend, and Laravel backend apps.</li>
+								<li data-en="Traced root causes through feature flow and error messages before fixing." data-id="Menelusuri akar masalah lewat alur fitur, pesan error, lalu memperbaikinya.">Traced root causes through feature flow and error messages before fixing.</li>
+								<li data-en="Pulled latest code on the server and verified the app ran properly after deploy." data-id="Update kode di server dan memastikan aplikasi berjalan normal pasca-deploy.">Pulled latest code on the server and verified the app ran properly after deploy.</li>
+							</ul>
 						</div>
-					</a>
+						<div class="tl-item reveal">
+							<span class="dot"><i class="fa-solid fa-gamepad"></i></span>
+							<div class="meta-row"><span class="when" data-en="Jul 2025 – Apr 2026" data-id="Jul 2025 – Apr 2026">Jul 2025 – Apr 2026</span></div>
+							<h3 data-en="Game Programmer (Part Time)" data-id="Game Programmer (Paruh Waktu)">Game Programmer (Part Time)</h3>
+							<div class="where"><span class="place">Hikayan Project</span></div>
+							<ul class="points">
+								<li data-en="Built gameplay features per game design: movement, interaction, scoring, level flow." data-id="Mengembangkan fitur gameplay sesuai game design: movement, interaksi, scoring, level flow.">Built gameplay features per game design: movement, interaction, scoring, level flow.</li>
+								<li data-en="Integrated assets, animations, SFX, and UI (menus, HUD, pop-ups) into the engine." data-id="Mengintegrasikan aset, animasi, SFX, dan UI (menu, HUD, pop-up) ke engine.">Integrated assets, animations, SFX, and UI (menus, HUD, pop-ups) into the engine.</li>
+								<li data-en="Bug fixing &amp; testing so mechanics and interactions worked as expected." data-id="Bug fixing &amp; testing agar mekanik dan interaksi berjalan sesuai harapan.">Bug fixing &amp; testing so mechanics and interactions worked as expected.</li>
+							</ul>
+						</div>
+						<div class="tl-item reveal">
+							<span class="dot"><i class="fa-solid fa-server"></i></span>
+							<div class="meta-row"><span class="when" data-en="Jul 2025 – Oct 2025" data-id="Jul 2025 – Okt 2025">Jul 2025 – Oct 2025</span></div>
+							<h3 data-en="Backend Developer Intern" data-id="Backend Developer Intern">Backend Developer Intern</h3>
+							<div class="where"><span class="place">Kabayan Group</span></div>
+							<ul class="points">
+								<li data-en="Bug fixing &amp; maintenance on backend apps using Python (FastAPI)." data-id="Bug fixing &amp; maintenance backend dengan Python (FastAPI).">Bug fixing &amp; maintenance on backend apps using Python (FastAPI).</li>
+								<li data-en="Analyzed API behavior, logs, and errors to find bug sources before fixing." data-id="Analisis API, log, dan error untuk menemukan sumber bug sebelum perbaikan.">Analyzed API behavior, logs, and errors to find bug sources before fixing.</li>
+								<li data-en="Supported deployment: pull code, check env config, validate the service." data-id="Mendukung deployment: pull kode, cek konfigurasi environment, validasi service.">Supported deployment: pull code, check env config, validate the service.</li>
+							</ul>
+						</div>
+						<div class="tl-item reveal">
+							<span class="dot"><i class="fa-solid fa-code"></i></span>
+							<div class="meta-row"><span class="when" data-en="Mar 2025 – Oct 2025" data-id="Mar 2025 – Okt 2025">Mar 2025 – Oct 2025</span></div>
+							<h3 data-en="Fullstack Developer" data-id="Fullstack Developer">Fullstack Developer</h3>
+							<div class="where"><span class="place" data-en="SubMeet — Conference Management (Freelance)" data-id="SubMeet — Conference Management (Freelance)">SubMeet — Conference Management (Freelance)</span></div>
+							<ul class="points">
+								<li data-en="Built a conference management system with Laravel, PostgreSQL, GitLab." data-id="Membangun sistem manajemen konferensi dengan Laravel, PostgreSQL, GitLab.">Built a conference management system with Laravel, PostgreSQL, GitLab.</li>
+								<li data-en="End-to-end flow: submission, review, revision, to editor decision." data-id="Alur end-to-end: submission, review, revisi, hingga keputusan editor.">End-to-end flow: submission, review, revision, to editor decision.</li>
+								<li data-en="Automated email notifications &amp; role-based user access." data-id="Notifikasi email otomatis &amp; akses berbasis peran pengguna.">Automated email notifications &amp; role-based user access.</li>
+							</ul>
+						</div>
+						<div class="tl-item reveal">
+							<span class="dot"><i class="fa-solid fa-leaf"></i></span>
+							<div class="meta-row"><span class="when" data-en="Mar 2024 – Sep 2024" data-id="Mar 2024 – Sep 2024">Mar 2024 – Sep 2024</span></div>
+							<h3 data-en="Fullstack Developer" data-id="Fullstack Developer">Fullstack Developer</h3>
+							<div class="where"><span class="place" data-en="Si Caper — Agricultural Harvest System (Freelance PKM)" data-id="Si Caper — Agricultural Harvest System (Freelance)">Si Caper — Agricultural Harvest System (Freelance)</span></div>
+							<ul class="points">
+								<li data-en="Web-based harvest recording system (Laravel, PostgreSQL) at BBPP West Java." data-id="Sistem pencatatan hasil panen berbasis web (Laravel, PostgreSQL) di BBPP Jawa Barat.">Web-based harvest recording system (Laravel, PostgreSQL) at BBPP West Java.</li>
+								<li data-en="Digitalized manual recording &amp; added Excel report export." data-id="Mendigitalkan pencatatan manual &amp; menambah export laporan ke Excel.">Digitalized manual recording &amp; added Excel report export.</li>
+								<li data-en="Designed database structures, backend logic, and input validation." data-id="Merancang struktur database, backend logic, dan validasi input.">Designed database structures, backend logic, and input validation.</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portofolio2.png);">
-						<div class="desc">
-							<h3>Si Caper</h3>
-							<span>Laravel</span>
+
+				<!-- EDUCATION + ACHIEVEMENT -->
+				<div class="j-edu">
+					<div class="col-title reveal">
+						<span class="ct-ic"><i class="fa-solid fa-graduation-cap"></i></span>
+						<h3 data-en="Education" data-id="Pendidikan">Education</h3>
+					</div>
+					<div class="timeline">
+						<div class="tl-item edu-item reveal">
+							<span class="dot"><i class="fa-solid fa-graduation-cap"></i></span>
+							<div class="meta-row"><span class="when">2022 – 2026</span></div>
+							<h3 data-en="D4 Informatics Engineering" data-id="D4 Teknik Informatika">D4 Informatics Engineering</h3>
+							<div class="where"><span class="place">Politeknik Negeri Bandung</span></div>
+							<span class="gpa">GPA 3.53</span>
 						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portofolio3.png);">
-						<div class="desc">
-							<h3>SubMeet</h3>
-							<span>Laravel</span>
+						<div class="tl-item edu-item reveal">
+							<span class="dot"><i class="fa-solid fa-school"></i></span>
+							<div class="meta-row"><span class="when">2019 – 2022</span></div>
+							<h3>MAN Insan Cendekia OKI</h3>
+							<div class="where"><span class="place" data-en="Science Major" data-id="Jurusan IPA">Science Major</span></div>
 						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portofolio4.jpg);">
-						<div class="desc">
-							<h3>Dramaku</h3>
-							<span>React JS | Node JS</span>
+					</div>
+
+					<div class="col-title reveal" style="margin-top:36px;">
+						<span class="ct-ic"><i class="fa-solid fa-trophy"></i></span>
+						<h3 data-en="Achievement" data-id="Prestasi">Achievement</h3>
+					</div>
+					<div class="achv reveal">
+						<span class="trophy"><i class="fa-solid fa-medal"></i></span>
+						<div>
+							<b data-en="2nd Place — KMIPN IV (2024)" data-id="Juara 2 — KMIPN IV (2024)">2nd Place — KMIPN IV (2024)</b>
+							<small data-en="Game Application Development Category" data-id="Kategori Game Application Development">Game Application Development Category</small>
 						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://www.youtube.com/watch?v=hphUW-_i3Qc" class="work" style="background-image: url(images/portofolio5.jpeg);">
-						<div class="desc">
-							<h3>Salma Jamu Shop</h3>
-							<span>Unity</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://mamamasal.itch.io/light-as-a-bubble" class="work" style="background-image: url(images/portofolio6.png);">
-						<div class="desc">
-							<h3>Light as A Buble</h3>
-							<span>Unity</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://hikayanproject.itch.io/hikayanproject-neatenup" class="work" style="background-image: url(https://img.itch.zone/aW1nLzIzMjA3NzA1LnBuZw==/original/B5ys6V.png);">
-						<div class="desc">
-							<h3>Neaten Up</h3>
-							<span>Unity</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portofolio8.png);">
-						<div class="desc">
-							<h3>3D Animation</h3>
-							<span>Blender</span>
-						</div>
-					</a>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div id="fh5co-footer">
+	</section>
+
+	<!-- TECH STACK -->
+	<section class="section tech" id="stack">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<p>&copy; Faris Abulkhoir</a></p>
+			<div class="section-head reveal">
+				<span class="eyebrow" data-en="Tools" data-id="Perkakas">Tools</span>
+				<h2 class="section-title" data-en="Tech Stack" data-id="Tech Stack">Tech Stack</h2>
+				<p data-en="Technologies I work with, grouped by area." data-id="Teknologi yang saya kuasai, dikelompokkan per bidang.">Technologies I work with, grouped by area.</p>
+			</div>
+			<div class="tech-groups">
+				<div class="tech-group reveal">
+					<div class="tg-head">
+						<span class="tg-ic"><i class="fa-solid fa-palette"></i></span>
+						<div><h3>Frontend</h3><small data-en="Interface &amp; user experience" data-id="Antarmuka &amp; pengalaman pengguna">Antarmuka &amp; pengalaman pengguna</small></div>
+					</div>
+					<div class="tech-items">
+						<span class="ti"><img src="https://static.cdnlogo.com/logos/h/90/html-5.svg" alt="">HTML5</span>
+						<span class="ti"><img src="https://static.cdnlogo.com/logos/c/18/css.svg" alt="">CSS3</span>
+						<span class="ti"><img src="https://static.cdnlogo.com/logos/j/44/javascript.svg" alt="">JavaScript</span>
+						<span class="ti"><img src="https://static.cdnlogo.com/logos/r/63/react.svg" alt="">React</span>
+						<span class="ti"><i class="fa-solid fa-wind" style="color:#38bdf8"></i>Tailwind</span>
+						<span class="ti"><i class="fa-brands fa-bootstrap" style="color:#7952b3"></i>Bootstrap</span>
+					</div>
+				</div>
+				<div class="tech-group reveal">
+					<div class="tg-head">
+						<span class="tg-ic"><i class="fa-solid fa-server"></i></span>
+						<div><h3>Backend &amp; Database</h3><small data-en="Server logic &amp; data storage" data-id="Logika server &amp; penyimpanan data">Logika server &amp; penyimpanan data</small></div>
+					</div>
+					<div class="tech-items">
+						<span class="ti"><img src="https://static.cdnlogo.com/logos/p/79/php.svg" alt="">PHP</span>
+						<span class="ti"><img src="https://static.cdnlogo.com/logos/l/23/laravel.svg" alt="">Laravel</span>
+						<span class="ti"><img src="https://static.cdnlogo.com/logos/p/3/python.svg" alt="">Python</span>
+						<span class="ti"><i class="fa-solid fa-bolt" style="color:#05998b"></i>FastAPI</span>
+						<span class="ti"><img src="https://static.cdnlogo.com/logos/m/10/mysql.svg" alt="">MySQL</span>
+						<span class="ti"><img src="https://static.cdnlogo.com/logos/p/93/postgresql.svg" alt="">PostgreSQL</span>
+						<span class="ti"><img src="https://static.cdnlogo.com/logos/m/25/mongodb.svg" alt="">MongoDB</span>
+					</div>
+				</div>
+				<div class="tech-group reveal">
+					<div class="tg-head">
+						<span class="tg-ic"><i class="fa-solid fa-gamepad"></i></span>
+						<div><h3>Game &amp; 3D</h3><small data-en="Game development &amp; visual assets" data-id="Pengembangan game &amp; aset visual">Pengembangan game &amp; aset visual</small></div>
+					</div>
+					<div class="tech-items">
+						<span class="ti"><img src="https://static.cdnlogo.com/logos/u/92/unity.svg" alt="">Unity</span>
+						<span class="ti"><i class="fa-solid fa-hashtag" style="color:#9b4f96"></i>C#</span>
+						<span class="ti"><img src="https://static.cdnlogo.com/logos/b/32/blender.svg" alt="">Blender</span>
+					</div>
+				</div>
+				<div class="tech-group reveal">
+					<div class="tg-head">
+						<span class="tg-ic"><i class="fa-solid fa-code-branch"></i></span>
+						<div><h3>Tools &amp; Collaboration</h3><small data-en="Version control &amp; design" data-id="Version control &amp; desain">Version control &amp; desain</small></div>
+					</div>
+					<div class="tech-items">
+						<span class="ti"><i class="fa-brands fa-git-alt" style="color:#f05032"></i>Git</span>
+						<span class="ti"><i class="fa-brands fa-github" style="color:#fff"></i>GitHub</span>
+						<span class="ti"><i class="fa-brands fa-gitlab" style="color:#fc6d26"></i>GitLab</span>
+						<span class="ti"><img src="https://static.cdnlogo.com/logos/f/43/figma.svg" alt="">Figma</span>
+						<span class="ti"><img src="https://static.cdnlogo.com/logos/c/36/canva.png" alt="">Canva</span>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-	</div>
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Easy PieChart -->
-	<script src="js/jquery.easypiechart.min.js"></script>
-	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-	<script src="js/google_map.js"></script>
-	
-	<!-- Main -->
-	<script src="js/main.js"></script>
+	<!-- PROJECTS -->
+	<section class="section" id="work">
+		<div class="container">
+			<div class="section-head reveal">
+				<span class="eyebrow" data-en="Portfolio" data-id="Portofolio">Portfolio</span>
+				<h2 class="section-title" data-en="Featured Projects" data-id="Proyek Unggulan">Featured Projects</h2>
+				<p data-en="Selected works from web to games." data-id="Beberapa karya pilihan dari web hingga game.">Selected works from web to games.</p>
+			</div>
+			<div class="filters reveal">
+				<button class="filter active" data-filter="all" data-en="All" data-id="Semua">All</button>
+				<button class="filter" data-filter="web">Web</button>
+				<button class="filter" data-filter="game">Game</button>
+				<button class="filter" data-filter="3d">3D</button>
+			</div>
+			<div class="proj-grid">
+				<div class="proj reveal" data-cat="web">
+					<div class="thumb"><span class="cat-badge">Web</span><img src="images/portofolio1.png" alt="Himakom Web App"></div>
+					<div class="body">
+						<h3>Himakom Web App</h3>
+						<p class="ptext" data-en="Official student association website: member management, news, and event agenda in one centralized dashboard." data-id="Website resmi himpunan mahasiswa: manajemen anggota, berita, dan agenda kegiatan dalam satu dashboard terpusat.">Official student association website: member management, news, and event agenda in one centralized dashboard.</p>
+						<div class="chips"><span>Laravel</span><span>MySQL</span><span>Blade</span></div>
+						<div class="actions"><span class="plink muted"><i class="fa-solid fa-building-columns"></i> <span data-en="Campus Project" data-id="Proyek Kampus">Campus Project</span></span></div>
+					</div>
+				</div>
+				<div class="proj reveal" data-cat="web">
+					<div class="thumb"><span class="cat-badge">Web</span><img src="images/portofolio2.png" alt="Si Caper"></div>
+					<div class="body">
+						<h3>Si Caper</h3>
+						<p class="ptext" data-en="Information system for structured data recording and reporting, with authentication and tiered access rights." data-id="Sistem informasi untuk pencatatan dan pelaporan data secara terstruktur, dengan autentikasi dan hak akses bertingkat.">Information system for structured data recording and reporting, with authentication and tiered access rights.</p>
+						<div class="chips"><span>Laravel</span><span>PostgreSQL</span></div>
+						<div class="actions"><span class="plink muted"><i class="fa-solid fa-building-columns"></i> <span data-en="Freelance" data-id="Freelance">Freelance</span></span></div>
+					</div>
+				</div>
+				<div class="proj reveal" data-cat="web">
+					<div class="thumb"><span class="cat-badge">Web</span><img src="images/portofolio3.png" alt="SubMeet"></div>
+					<div class="body">
+						<h3>SubMeet</h3>
+						<p class="ptext" data-en="Conference management system handling paper submission, review, revision, and editor decisions end-to-end." data-id="Sistem manajemen konferensi: submission paper, review, revisi, hingga keputusan editor secara end-to-end.">Conference management system handling paper submission, review, revision, and editor decisions end-to-end.</p>
+						<div class="chips"><span>Laravel</span><span>PostgreSQL</span><span>GitLab</span></div>
+						<div class="actions"><span class="plink muted"><i class="fa-solid fa-building-columns"></i> <span data-en="Freelance" data-id="Freelance">Freelance</span></span></div>
+					</div>
+				</div>
+				<div class="proj reveal" data-cat="web">
+					<div class="thumb"><span class="cat-badge">Web</span><img src="images/portofolio4.jpg" alt="Dramaku"></div>
+					<div class="body">
+						<h3>Dramaku</h3>
+						<p class="ptext" data-en="Film/drama catalog &amp; review platform. React frontend with a Node.js backend — search, rating, and recommendations." data-id="Platform katalog &amp; review film/drama. Frontend React dengan backend Node.js — pencarian, rating, dan rekomendasi.">Film/drama catalog &amp; review platform. React frontend with a Node.js backend — search, rating, and recommendations.</p>
+						<div class="chips"><span>React</span><span>Node.js</span><span>REST API</span></div>
+						<div class="actions"><span class="plink muted"><i class="fa-solid fa-code"></i> Full-stack</span></div>
+					</div>
+				</div>
+				<div class="proj reveal" data-cat="game">
+					<div class="thumb video-thumb" data-youtube="hphUW-_i3Qc" role="button" tabindex="0" aria-label="Play Salma Jamu Shop gameplay video">
+						<span class="cat-badge">Game</span>
+						<img src="https://i.ytimg.com/vi/hphUW-_i3Qc/maxresdefault.jpg" alt="Salma Jamu Shop gameplay video">
+						<span class="play-btn"><i class="fa-solid fa-play"></i></span>
+					</div>
+					<div class="body">
+						<h3>Salma Jamu Shop</h3>
+						<p class="ptext" data-en="A jamu-selling simulation game themed on local culture. Built in Unity with transaction mechanics and player progression." data-id="Game simulasi berjualan jamu bertema budaya lokal. Dibangun di Unity dengan mekanik transaksi dan progres pemain.">A jamu-selling simulation game themed on local culture. Built in Unity with transaction mechanics and player progression.</p>
+						<div class="chips"><span>Unity</span><span>C#</span></div>
+						<div class="actions"><a class="plink" href="https://www.youtube.com/watch?v=hphUW-_i3Qc" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> Demo</a></div>
+					</div>
+				</div>
+				<div class="proj reveal" data-cat="game">
+					<div class="thumb"><span class="cat-badge">Game</span><img src="images/portofolio6.png" alt="Light as a Bubble"></div>
+					<div class="body">
+						<h3>Light as a Bubble</h3>
+						<p class="ptext" data-en="A bubble-themed puzzle-platformer, publicly released on itch.io — focused on light mechanics and atmosphere." data-id="Game puzzle-platformer bertema gelembung. Dirilis publik di itch.io — fokus pada mekanik ringan dan atmosfer.">A bubble-themed puzzle-platformer, publicly released on itch.io — focused on light mechanics and atmosphere.</p>
+						<div class="chips"><span>Unity</span><span>C#</span><span>Game Jam</span></div>
+						<div class="actions"><a class="plink" href="https://mamamasal.itch.io/light-as-a-bubble" target="_blank" rel="noopener"><i class="fa-solid fa-gamepad"></i> <span data-en="Play" data-id="Mainkan">Play</span></a></div>
+					</div>
+				</div>
+				<div class="proj reveal" data-cat="game">
+					<div class="thumb video-thumb" data-youtube="aUZTbmxXwf0" role="button" tabindex="0" aria-label="Play Neaten Up gameplay video">
+						<span class="cat-badge">Game</span>
+						<img src="https://i.ytimg.com/vi/aUZTbmxXwf0/maxresdefault.jpg" alt="Neaten Up gameplay video">
+						<span class="play-btn"><i class="fa-solid fa-play"></i></span>
+					</div>
+					<div class="body">
+						<h3>Neaten Up</h3>
+						<p class="ptext" data-en="A room-tidying game made during a game jam. Released on itch.io with relaxing, satisfying gameplay." data-id="Game bertema merapikan ruangan, dibuat dalam game jam. Dirilis di itch.io dengan gameplay santai dan memuaskan.">A room-tidying game made during a game jam. Released on itch.io with relaxing, satisfying gameplay.</p>
+						<div class="chips"><span>Unity</span><span>C#</span><span>Game Jam</span></div>
+						<div class="actions">
+							<a class="plink" href="https://hikayanproject.itch.io/hikayanproject-neatenup" target="_blank" rel="noopener"><i class="fa-solid fa-gamepad"></i> <span data-en="Play" data-id="Mainkan">Play</span></a>
+							<a class="plink" href="https://youtu.be/aUZTbmxXwf0" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> <span data-en="Video" data-id="Video">Video</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="proj reveal" data-cat="3d">
+					<div class="thumb"><span class="cat-badge">3D</span><img src="images/portofolio8.png" alt="3D Animation"></div>
+					<div class="body">
+						<h3>3D Animation</h3>
+						<p class="ptext" data-en="Exploring 3D modeling and animation in Blender — from asset creation to rigging and scene rendering." data-id="Eksplorasi modeling dan animasi 3D di Blender — dari pembuatan aset hingga rigging dan rendering adegan.">Exploring 3D modeling and animation in Blender — from asset creation to rigging and scene rendering.</p>
+						<div class="chips"><span>Blender</span><span>Modeling</span><span>Animation</span></div>
+						<div class="actions"><span class="plink muted"><i class="fa-solid fa-cube"></i> <span data-en="Personal" data-id="Personal">Personal</span></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-	</body>
+	<!-- CONTACT -->
+	<section class="section cta" id="contact">
+		<div class="container">
+			<div class="section-head reveal" style="margin-bottom:48px;">
+				<span class="eyebrow" data-en="Contact" data-id="Kontak">Contact</span>
+				<h2 class="section-title" data-en="Let's <span class='gradient-text'>talk</span>" data-id="Mari <span class='gradient-text'>ngobrol</span>">Let's <span class="gradient-text">talk</span></h2>
+				<p data-en="Open for collaboration, internships, or freelance projects." data-id="Terbuka untuk kolaborasi, magang, atau project freelance.">Open for collaboration, internships, or freelance projects.</p>
+			</div>
+			<div class="contact-grid reveal">
+				<div class="contact-aside">
+					<div class="contact-info-list">
+						<div class="ci">
+							<span class="ci-ic"><i class="fa-solid fa-envelope"></i></span>
+							<div><small>Email</small><b>abulkhoirfaris0@gmail.com</b></div>
+						</div>
+						<a class="ci" href="https://github.com/fas-a" target="_blank" rel="noopener">
+							<span class="ci-ic"><i class="fa-brands fa-github"></i></span>
+							<div><small>GitHub</small><b>github.com/fas-a</b></div>
+						</a>
+						<a class="ci" href="https://id.linkedin.com/in/faris-abulkhoir-648984248" target="_blank" rel="noopener">
+							<span class="ci-ic"><i class="fa-brands fa-linkedin-in"></i></span>
+							<div><small>LinkedIn</small><b>Faris Abulkhoir</b></div>
+						</a>
+						<div class="ci">
+							<span class="ci-ic"><i class="fa-solid fa-location-dot"></i></span>
+							<div><small data-en="Location" data-id="Lokasi">Location</small><b>Karawang, Indonesia</b></div>
+						</div>
+					</div>
+				</div>
+				<form class="contact-form" id="contactForm" action="mailto:abulkhoirfaris0@gmail.com" method="post" enctype="text/plain">
+					<div class="form-row">
+						<div class="field">
+							<label for="name" data-en="Name" data-id="Nama">Name</label>
+							<input type="text" id="name" name="name" data-ph data-en="Your name" data-id="Nama kamu" placeholder="Your name" required>
+						</div>
+						<div class="field">
+							<label for="email">Email</label>
+							<input type="email" id="email" name="email" data-ph data-en="you@email.com" data-id="email@kamu.com" placeholder="you@email.com" required>
+						</div>
+					</div>
+					<div class="field">
+						<label for="subject" data-en="Subject" data-id="Subjek">Subject</label>
+						<input type="text" id="subject" name="subject" data-ph data-en="What's it about?" data-id="Tentang apa?" placeholder="What's it about?">
+					</div>
+					<div class="field">
+						<label for="message" data-en="Message" data-id="Pesan">Message</label>
+						<textarea id="message" name="message" data-ph data-en="Write your message here..." data-id="Tulis pesanmu di sini..." placeholder="Write your message here..." required></textarea>
+					</div>
+					<button type="submit" class="btn btn-primary" style="justify-content:center;" data-en="Send Message <i class='fa-solid fa-paper-plane'></i>" data-id="Kirim Pesan <i class='fa-solid fa-paper-plane'></i>">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+					<p class="form-note" data-en="This form opens your email app. You can also email me <a href='mailto:abulkhoirfaris0@gmail.com' style='color:var(--brand)'>directly</a>." data-id="Form ini membuka aplikasi email kamu. Bisa juga langsung ke <a href='mailto:abulkhoirfaris0@gmail.com' style='color:var(--brand)'>email saya</a>.">This form opens your email app. You can also email me <a href="mailto:abulkhoirfaris0@gmail.com" style="color:var(--brand)">directly</a>.</p>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; <span id="year"></span> Faris Abulkhoir</p>
+			<div class="socials">
+				<a href="https://github.com/fas-a" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+				<a href="https://id.linkedin.com/in/faris-abulkhoir-648984248" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+				<a href="mailto:abulkhoirfaris0@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+			</div>
+		</div>
+	</footer>
+
+	<a href="#home" class="top" id="toTop" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></a>
+
+	<!-- Nailong pixel mascot (pure CSS, original pixel-art — not a copied image) -->
+	<a href="#contact" class="nailong" aria-label="Nailong">
+		<span class="px"></span>
+		<span class="speech" data-en="Hire me! :3" data-id="Yuk kerja bareng! :3">Hire me! :3</span>
+	</a>
+
+	<script>
+		// ===== i18n (EN default, ID toggle) =====
+		var LANG_KEY = 'faris-lang';
+		var currentLang = localStorage.getItem(LANG_KEY) || 'en';
+		var typedWords = {
+			en: ['Web Developer', 'Game Developer', 'Backend Developer', 'Problem Solver'],
+			id: ['Web Developer', 'Game Developer', 'Backend Developer', 'Pemecah Masalah']
+		};
+		function applyLang(lang) {
+			currentLang = (lang === 'id') ? 'id' : 'en';
+			localStorage.setItem(LANG_KEY, currentLang);
+			document.documentElement.setAttribute('lang', currentLang);
+			document.querySelectorAll('[data-en]').forEach(function (el) {
+				var val = el.getAttribute('data-' + currentLang);
+				if (val === null) return;
+				if (el.hasAttribute('data-ph')) { el.setAttribute('placeholder', val); }
+				else { el.innerHTML = val; }
+			});
+			document.querySelectorAll('.lang-switch button').forEach(function (b) {
+				b.classList.toggle('active', b.getAttribute('data-lang') === currentLang);
+			});
+			if (window.__retypeLang) window.__retypeLang();
+		}
+		document.querySelectorAll('.lang-switch button').forEach(function (b) {
+			b.addEventListener('click', function () { applyLang(b.getAttribute('data-lang')); });
+		});
+
+		// year
+		document.getElementById('year').textContent = new Date().getFullYear();
+
+		// typing effect (language-aware)
+		(function () {
+			var el = document.getElementById('typed');
+			var w = 0, c = 0, deleting = false, timer;
+			window.__retypeLang = function () { w = 0; c = 0; deleting = false; };
+			function tick() {
+				var words = typedWords[currentLang];
+				var word = words[w % words.length];
+				el.textContent = word.substring(0, c);
+				if (!deleting && c < word.length) { c++; timer = setTimeout(tick, 90); }
+				else if (!deleting && c === word.length) { deleting = true; timer = setTimeout(tick, 1400); }
+				else if (deleting && c > 0) { c--; timer = setTimeout(tick, 45); }
+				else { deleting = false; w = (w + 1) % words.length; timer = setTimeout(tick, 300); }
+			}
+			tick();
+		})();
+
+		// navbar scrolled + back-to-top + active link
+		var nav = document.getElementById('nav');
+		var toTop = document.getElementById('toTop');
+		var sections = document.querySelectorAll('section[id]');
+		var navAnchors = document.querySelectorAll('.nav-links a');
+		window.addEventListener('scroll', function () {
+			var y = window.scrollY;
+			nav.classList.toggle('scrolled', y > 40);
+			toTop.classList.toggle('show', y > 500);
+			var cur = '';
+			sections.forEach(function (s) {
+				if (y >= s.offsetTop - 120) cur = s.id;
+			});
+			navAnchors.forEach(function (a) {
+				a.classList.toggle('current', a.getAttribute('href') === '#' + cur);
+			});
+		});
+
+		// mobile menu
+		var toggle = document.getElementById('navToggle');
+		var links = document.getElementById('navLinks');
+		toggle.addEventListener('click', function () { links.classList.toggle('open'); });
+		links.querySelectorAll('a').forEach(function (a) {
+			a.addEventListener('click', function () { links.classList.remove('open'); });
+		});
+
+		// scroll reveal
+		var io = new IntersectionObserver(function (entries) {
+			entries.forEach(function (e) {
+				if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+			});
+		}, { threshold: 0.12 });
+		document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+		// project filters
+		var filters = document.querySelectorAll('.filter');
+		var projects = document.querySelectorAll('.proj');
+		filters.forEach(function (btn) {
+			btn.addEventListener('click', function () {
+				filters.forEach(function (b) { b.classList.remove('active'); });
+				btn.classList.add('active');
+				var f = btn.getAttribute('data-filter');
+				projects.forEach(function (p) {
+					var show = f === 'all' || p.getAttribute('data-cat') === f;
+					p.classList.toggle('hide', !show);
+				});
+			});
+		});
+
+		// scroll progress bar
+		var bar = document.getElementById('progressTop');
+		function updateBar() {
+			var h = document.documentElement;
+			var sc = h.scrollTop || document.body.scrollTop;
+			var max = h.scrollHeight - h.clientHeight;
+			bar.style.width = (max > 0 ? (sc / max) * 100 : 0) + '%';
+		}
+		window.addEventListener('scroll', updateBar); updateBar();
+
+		// click-to-play YouTube embeds (iframe only loads on click)
+		document.querySelectorAll('.video-thumb').forEach(function (t) {
+			function play() {
+				if (t.classList.contains('playing')) return;
+				var id = t.getAttribute('data-youtube');
+				var f = document.createElement('iframe');
+				f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+				f.title = (t.querySelector('img') || {}).alt || 'Video';
+				f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+				f.allowFullscreen = true;
+				t.classList.add('playing');
+				t.innerHTML = '';
+				t.appendChild(f);
+			}
+			t.addEventListener('click', play);
+			t.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); }
+			});
+		});
+
+		// apply saved/default language last (after DOM text set)
+		applyLang(currentLang);
+	</script>
+</body>
 </html>
-
